@@ -4,9 +4,8 @@
 using namespace std;
 
 class StreamWriter {
-protected:
-	ostream* os;
+
 public:
 	StreamWriter() {};
-	~StreamWriter() {};
+	virtual void write(char* buffer, int size) = 0;
 };

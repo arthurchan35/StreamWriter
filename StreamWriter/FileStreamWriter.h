@@ -1,8 +1,14 @@
 #pragma once
 #include "StreamWriter.h"
+#include <fstream>
+
+using namespace std;
+
 class FileStreamWriter : public StreamWriter {
+	ofstream file;
 public:
-	FileStreamWriter();
+	FileStreamWriter(char* filePath);
+	void write(char* buffer, int size);
 	~FileStreamWriter();
 };
 
